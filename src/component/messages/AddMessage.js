@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Consumer} from '../../context';
 import MessageTemplate from '../layout/MessageTemplate'; 
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 class AddMessage extends Component {
     state = {
         title: '',
@@ -62,6 +63,7 @@ class AddMessage extends Component {
                   const {dispatch} = value;
                   return(
                     <div className="col col-md-8 col-lg-6 mx-auto text-center">
+                        <button type="button" className="btn btn-outline-secondary mb-5"><Link to='/' className="nav-link text-color">Go Back</Link></button>
                             <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                                 <MessageTemplate label="title" name="title" placeholder="Choose your title.." value={title} onChange={this.onChange} error={errors.title}/>
                                 <MessageTemplate label="mood" name="mood" placeholder="What's your mood?..." value={mood} onChange={this.onChange} error={errors.mood}/>
