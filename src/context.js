@@ -36,7 +36,6 @@ export class Provider extends Component {
     this.setState({
         messages: res.data
     })
-    console.log(this.state.messages)
   }
   render() {
       return (
