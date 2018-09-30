@@ -16,7 +16,6 @@ class Message extends Component {
         {value => {
           const { dispatch } = value;
           return(
-
             <div className="row mt-5 mb-5 pb-5 pt-5">
               <div className="col-12 text-center border-bottom pb-3 mb-3 border-color"><h2 style={{color: '#233443'}}>{title}</h2></div>
               <div className="col-md-3 col-sm-12 border-right mr-5 text-center border-color text-color fix-small-border">{mood}<br/>{moment(date).format('DD/MM/YYYY')}</div>
